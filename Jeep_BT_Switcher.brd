@@ -241,6 +241,25 @@
 </polygon>
 <text x="3.81" y="-1.27" size="1.016" layer="21" font="vector" ratio="16" rot="R270" align="center-left">&gt;LABEL04</text>
 </package>
+<package name="PTH_2.54MM_01X02">
+<description>&lt;b&gt;Description:&lt;/b&gt; Package for 2.54MM Pitch Header 2 Position. Based on 4UCON 00834.&lt;br&gt;</description>
+<pad name="P$1" x="-1.27" y="0" drill="1"/>
+<wire x1="-2.52" y1="1.25" x2="2.52" y2="1.25" width="0.127" layer="21"/>
+<wire x1="2.52" y1="1.25" x2="2.52" y2="-1.25" width="0.127" layer="21"/>
+<wire x1="2.52" y1="-1.25" x2="-2.52" y2="-1.25" width="0.127" layer="21"/>
+<wire x1="-2.52" y1="-1.25" x2="-2.52" y2="1.25" width="0.127" layer="21"/>
+<text x="-2.52" y="1.5" size="1.016" layer="25" font="vector" ratio="16">&gt;NAME</text>
+<pad name="P$2" x="1.27" y="0" drill="1"/>
+<text x="1.27" y="-1.27" size="1.016" layer="21" font="vector" ratio="16" rot="R90" align="center-right">&gt;LABEL02</text>
+<polygon width="0.127" layer="21">
+<vertex x="-3.175" y="-1.905"/>
+<vertex x="-2.54" y="-1.905"/>
+<vertex x="-1.905" y="-1.27"/>
+<vertex x="-2.54" y="-0.635"/>
+<vertex x="-3.175" y="-1.27"/>
+</polygon>
+<text x="-1.27" y="-1.27" size="1.016" layer="21" font="vector" ratio="16" rot="R90" align="center-right">&gt;LABEL01</text>
+</package>
 </packages>
 </library>
 <library name="PP_AnalogIC">
@@ -675,6 +694,15 @@
 <attribute name="HOUSEPART" value="" x="15.24" y="18.288" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="NAME" x="13.44" y="16.34" size="1.016" layer="25" font="vector" ratio="16"/>
 </element>
+<element name="J3" library="MF_Connectors" package="PTH_2.54MM_01X02" value="MF-CON-2.54mm-01x02" x="30.988" y="34.798" smashed="yes">
+<attribute name="LABEL02" value="GND" x="32.258" y="33.528" size="1.016" layer="22" font="vector" ratio="16" rot="R90" align="center-right"/>
+<attribute name="HOUSEPART" value="YES" x="30.988" y="34.798" size="1.778" layer="27" display="off"/>
+<attribute name="LABEL01" value="VCC" x="29.718" y="33.528" size="1.016" layer="22" font="vector" ratio="16" rot="R90" align="center-right"/>
+<attribute name="MPN" value="MF-CON-2.54mm-01x02" x="30.988" y="34.798" size="1.778" layer="27" display="off"/>
+<attribute name="POPULATE" value="1" x="30.988" y="34.798" size="1.778" layer="27" display="off"/>
+<attribute name="URL" value="https://factory.macrofab.com/part/MF-CON-2.54mm-01x02" x="30.988" y="34.798" size="1.778" layer="27" display="off"/>
+<attribute name="NAME" x="26.436" y="34.52" size="1.016" layer="25" font="vector" ratio="16"/>
+</element>
 </elements>
 <signals>
 <signal name="VCC">
@@ -708,7 +736,8 @@
 <wire x1="42.418" y1="23.622" x2="41.148" y2="24.892" width="0.6096" layer="1"/>
 <wire x1="41.148" y1="24.892" x2="36.83" y2="24.892" width="0.6096" layer="1"/>
 <wire x1="36.83" y1="24.892" x2="33.782" y2="27.94" width="0.6096" layer="1"/>
-<wire x1="33.782" y1="27.94" x2="29.21" y2="27.94" width="0.6096" layer="1"/>
+<wire x1="33.782" y1="27.94" x2="31.242" y2="27.94" width="0.6096" layer="1"/>
+<wire x1="29.718" y1="27.94" x2="29.21" y2="27.94" width="0.6096" layer="1"/>
 <wire x1="29.21" y1="27.94" x2="28.067" y2="26.797" width="0.6096" layer="1"/>
 <wire x1="28.067" y1="26.797" x2="28.067" y2="24.544" width="0.6096" layer="1"/>
 <wire x1="14.29" y1="8.636" x2="10.922" y2="8.636" width="0.3048" layer="1"/>
@@ -732,6 +761,9 @@
 <contactref element="C7" pad="P$1"/>
 <wire x1="16.19" y1="18.288" x2="16.256" y2="18.288" width="0.3048" layer="1"/>
 <wire x1="16.256" y1="18.288" x2="16.256" y2="17.272" width="0.3048" layer="1"/>
+<contactref element="J3" pad="P$1"/>
+<wire x1="29.718" y1="34.798" x2="29.718" y2="27.94" width="0.6096" layer="1"/>
+<wire x1="29.718" y1="27.94" x2="31.242" y2="27.94" width="0.6096" layer="1"/>
 </signal>
 <signal name="GND">
 <contactref element="U1" pad="4"/>
@@ -793,6 +825,7 @@
 <wire x1="14.29" y1="18.288" x2="12.954" y2="18.288" width="0.3048" layer="1"/>
 <via x="12.954" y="18.288" extent="1-16" drill="0.6"/>
 <wire x1="12.954" y1="18.288" x2="12.954" y2="18.542" width="0.3048" layer="16"/>
+<contactref element="J3" pad="P$2"/>
 </signal>
 <signal name="N$1">
 <contactref element="U1" pad="2"/>

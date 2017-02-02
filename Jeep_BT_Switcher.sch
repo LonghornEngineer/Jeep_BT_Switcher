@@ -913,6 +913,25 @@
 </polygon>
 <text x="3.81" y="-1.27" size="1.016" layer="21" font="vector" ratio="16" rot="R270" align="center-left">&gt;LABEL04</text>
 </package>
+<package name="PTH_2.54MM_01X02">
+<description>&lt;b&gt;Description:&lt;/b&gt; Package for 2.54MM Pitch Header 2 Position. Based on 4UCON 00834.&lt;br&gt;</description>
+<pad name="P$1" x="-1.27" y="0" drill="1"/>
+<wire x1="-2.52" y1="1.25" x2="2.52" y2="1.25" width="0.127" layer="21"/>
+<wire x1="2.52" y1="1.25" x2="2.52" y2="-1.25" width="0.127" layer="21"/>
+<wire x1="2.52" y1="-1.25" x2="-2.52" y2="-1.25" width="0.127" layer="21"/>
+<wire x1="-2.52" y1="-1.25" x2="-2.52" y2="1.25" width="0.127" layer="21"/>
+<text x="-2.52" y="1.5" size="1.016" layer="25" font="vector" ratio="16">&gt;NAME</text>
+<pad name="P$2" x="1.27" y="0" drill="1"/>
+<text x="1.27" y="-1.27" size="1.016" layer="21" font="vector" ratio="16" rot="R90" align="center-right">&gt;LABEL02</text>
+<polygon width="0.127" layer="21">
+<vertex x="-3.175" y="-1.905"/>
+<vertex x="-2.54" y="-1.905"/>
+<vertex x="-1.905" y="-1.27"/>
+<vertex x="-2.54" y="-0.635"/>
+<vertex x="-3.175" y="-1.27"/>
+</polygon>
+<text x="-1.27" y="-1.27" size="1.016" layer="21" font="vector" ratio="16" rot="R90" align="center-right">&gt;LABEL01</text>
+</package>
 </packages>
 <symbols>
 <symbol name="CON_01X06">
@@ -962,6 +981,21 @@
 <text x="0.508" y="0" size="1.016" layer="97" font="vector" align="center-left">PIN01</text>
 <text x="0.508" y="-2.54" size="1.016" layer="97" font="vector" align="center-left">PIN02</text>
 <text x="0.508" y="-5.08" size="1.016" layer="97" font="vector" align="center-left">PIN03</text>
+</symbol>
+<symbol name="CON_01X02">
+<description>&lt;b&gt;Description:&lt;/b&gt; Symbol for Connector 2 Position 1 Row.&lt;br&gt;</description>
+<pin name="PIN2" x="-2.54" y="-2.54" visible="off" length="short"/>
+<text x="7.62" y="0" size="1.016" layer="97" font="vector" align="center-left">&gt;LABEL01</text>
+<wire x1="0" y1="-3.81" x2="16.51" y2="-3.81" width="0.127" layer="94"/>
+<pin name="PIN1" x="-2.54" y="0" visible="off" length="short"/>
+<wire x1="0" y1="1.27" x2="0" y2="-3.81" width="0.127" layer="94"/>
+<wire x1="16.51" y1="-3.81" x2="16.51" y2="1.27" width="0.127" layer="94"/>
+<wire x1="16.51" y1="1.27" x2="0" y2="1.27" width="0.127" layer="94"/>
+<text x="0" y="5.08" size="1.016" layer="95" font="vector" align="top-left">&gt;NAME</text>
+<text x="0" y="2.54" size="1.016" layer="96" font="vector">&gt;VALUE</text>
+<text x="0.508" y="0" size="1.016" layer="97" font="vector" align="center-left">PIN01</text>
+<text x="7.62" y="-2.54" size="1.016" layer="97" font="vector" align="center-left">&gt;LABEL02</text>
+<text x="0.508" y="-2.54" size="1.016" layer="97" font="vector" align="center-left">PIN02</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -1024,6 +1058,32 @@
 <attribute name="POPULATE" value="1" constant="no"/>
 <attribute name="URL" value="https://factory.macrofab.com/part/MF-CON-2.54mm-01x04" constant="no"/>
 <attribute name="VALUE" value="MF-CON-2.54mm-01x04" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="CON_01X02" prefix="J">
+<description>&lt;b&gt;Library:&lt;/b&gt;  MF_Connectors&lt;br/&gt;
+&lt;b&gt;Description:&lt;/b&gt; Header Connector with 02 Positions and 01 Rows. Use the LABEL Attribute to label the pin on the schematic and PCB. You can remove the attributes on the PCB by using the SMASH function on the part and then deleting the text.&lt;br/&gt;</description>
+<gates>
+<gate name="G$1" symbol="CON_01X02" x="0" y="0"/>
+</gates>
+<devices>
+<device name="_PTH_2.54MM" package="PTH_2.54MM_01X02">
+<connects>
+<connect gate="G$1" pin="PIN1" pad="P$1"/>
+<connect gate="G$1" pin="PIN2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="HOUSEPART" value="YES" constant="no"/>
+<attribute name="LABEL01" value="" constant="no"/>
+<attribute name="LABEL02" value="" constant="no"/>
+<attribute name="MPN" value="MF-CON-2.54mm-01x02" constant="no"/>
+<attribute name="POPULATE" value="1" constant="no"/>
+<attribute name="URL" value="https://factory.macrofab.com/part/MF-CON-2.54mm-01x02" constant="no"/>
+<attribute name="VALUE" value="MF-CON-2.54mm-01x02" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -1187,6 +1247,10 @@
 <part name="H3" library="PP_Connectors" deviceset="MOUNT_HOLE" device="150MIL"/>
 <part name="H4" library="PP_Connectors" deviceset="MOUNT_HOLE" device="150MIL"/>
 <part name="C7" library="MF_Passives" deviceset="CAPACITOR_NP" device="_0805" value="0.1uF"/>
+<part name="J3" library="MF_Connectors" deviceset="CON_01X02" device="_PTH_2.54MM" value="MF-CON-2.54mm-01x02">
+<attribute name="LABEL01" value="VCC"/>
+<attribute name="LABEL02" value="GND"/>
+</part>
 </parts>
 <sheets>
 <sheet>
@@ -1230,6 +1294,7 @@
 <instance part="H3" gate="G$1" x="203.2" y="66.04"/>
 <instance part="H4" gate="G$1" x="203.2" y="58.42"/>
 <instance part="C7" gate="G$1" x="7.62" y="86.36" rot="MR0"/>
+<instance part="J3" gate="G$1" x="99.06" y="124.46"/>
 </instances>
 <busses>
 </busses>
@@ -1285,6 +1350,11 @@
 <wire x1="127" y1="27.94" x2="127" y2="35.56" width="0.1524" layer="91"/>
 <junction x="127" y="35.56"/>
 <label x="129.54" y="35.56" size="1.016" layer="95" font="vector"/>
+</segment>
+<segment>
+<pinref part="J3" gate="G$1" pin="PIN1"/>
+<wire x1="96.52" y1="124.46" x2="83.82" y2="124.46" width="0.1524" layer="91"/>
+<label x="86.36" y="124.46" size="1.016" layer="95" font="vector"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -1347,6 +1417,11 @@
 <wire x1="127" y1="22.86" x2="127" y2="17.78" width="0.1524" layer="91"/>
 <junction x="127" y="17.78"/>
 <label x="129.54" y="17.78" size="1.016" layer="95" font="vector"/>
+</segment>
+<segment>
+<pinref part="J3" gate="G$1" pin="PIN2"/>
+<wire x1="83.82" y1="121.92" x2="96.52" y2="121.92" width="0.1524" layer="91"/>
+<label x="86.36" y="121.92" size="1.016" layer="95" font="vector"/>
 </segment>
 </net>
 <net name="N$1" class="0">
